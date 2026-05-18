@@ -73,21 +73,6 @@ module Counter_Down_16
         
 endmodule : Counter_Down_16
 
-/* 
-  check is a value is between [lo,hi] (inclusive for both)
-   for a certain value (val) and outputs whether that value is 
-   lo <= val <= hi.
-*/
-
-module RangeCheck
-    #(parameter WIDTH = 6)
-    (input logic [WIDTH-1:0] val,
-    input logic [WIDTH-1:0] lo,
-    input logic [WIDTH-1:0] hi,
-    output logic is_between);
-      
-    assign is_between = (val >= lo) && (val <= hi);
-endmodule: RangeCheck
 
 /* 
    This module is used for the CRC_5 and CRC_16 on
